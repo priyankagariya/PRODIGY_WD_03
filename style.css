@@ -1,0 +1,80 @@
+body{
+    background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+    font-size: 50px;
+    font-style: italic;
+    color: aliceblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+title{
+    
+    font-size: 60px;
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+    padding-top: 50%;
+}
+
+#gameboard{
+    
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px rgb(72, 108, 225);
+
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgb(133, 226, 209) ;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 10px solid black;
+    box-sizing: border-box;
+
+}
+ .cross{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+ }
+
+ .cross::before, .cross::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+ }
+  .cross::before{
+    left: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: -15%;
+
+  }
+
+  .cross::after{
+    top: 50%;
+    width: 100%;
+    height: 30%;
+    margin-top:-15% ;
+  }
